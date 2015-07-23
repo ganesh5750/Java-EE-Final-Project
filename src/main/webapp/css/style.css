@@ -7,7 +7,7 @@ html
   padding: 0;}
 
 body
-{ font: normal .80em arial, sans-serif;
+{ font: normal 1em arial, sans-serif;
   color: #fff;
   background: transparent url(../images/background.png) repeat;}
 
@@ -152,36 +152,56 @@ ul#menu li a:hover
   margin-top: 10px;
   padding: 20px 20px 0 0;
   float: left;}
-  
+
+#emergency
+{
+    width : 350px;
+    background-color: red;
+    margin-left:140px;
+    margin-bottom : 20px;
+}  
 .content_item
 { width: 710px; }
 
 .content_image
-{ width: 148px;
-  height: 148px;
+{ margin-bottom: 10px;
+  width: 140px;
+  height: 90px;
   margin-top: 20px;
   float: left;
+  padding-bottom: 10px;
   border: 1px solid #111111;}
-  
-.content_image_right
-{ width: 148px;
-  height: 148px;
-  margin-top: 20px;
-  float: right;
-  border: 1px solid #111111;}
-  
+    
 .content_text
 { width: 520px;
   float: right;
   margin-top: 20px;
   padding-left: 20px;}
   
-.content_text_left
-{ width: 520px;
-  float: left;
-  margin-top: 20px;
-  padding-left: 20px;}
+#sideimg
+{
+    width:180px;
+    height:61px;
+    vertical-align: top;
+    margin-bottom: 10px;
+}
 
+.side_heading 
+{
+    background-color: red;
+    
+}
+
+#side_msg 
+{
+    color:lightseagreen;
+}
+#sidetitle 
+{
+    color : white;
+    text-align: center;
+    margin-left:10px;
+}
 #banner_image {
 	width: 960px;
 }
