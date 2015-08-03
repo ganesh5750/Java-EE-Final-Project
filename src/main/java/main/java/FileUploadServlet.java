@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
  
 @WebServlet("/upload")
-@MultipartConfig(location = "/var/lib/openshift/12592ddfd6824bd88a45a3dd111b2ced/app-root/data")
+@MultipartConfig(location = "/var/lib/openshift/55aeeeb2e0b8cd0d8f0000fb/app-root/data")
 public class FileUploadServlet extends HttpServlet {
  
     private static final long serialVersionUID = 1L;
