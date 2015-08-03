@@ -32,34 +32,13 @@ public class FileUploadServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request,
             HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
+           
+         
+         
  
-        Collection<Part> parts = request.getParts();
- 
-        out.write("<h2> Total parts : " + parts.size() + "</h2>");
- 
-        for (Part part : parts) {
-            printEachPart(part, out);
-            part.write(getFileName(part));
         }
-    }
  
-    private void printEachPart(Part part, PrintWriter pw) {
-        StringBuffer sb = new StringBuffer();
-        sb.append("<p>");
-        sb.append("Name : " + part.getName());
-        sb.append("<br>");
-        sb.append("Content Type : " + part.getContentType());
-        sb.append("<br>");
-        sb.append("Size : " + part.getSize());
-        sb.append("<br>");
-        for (String header : part.getHeaderNames()) {
-            sb.append(header + " : " + part.getHeader(header));
-            sb.append("<br>");
-        }
-        sb.append("</p>");
-        pw.write(sb.toString());
- 
-    }
+    
  
     private String getFileName(Part part) {
         String partHeader = part.getHeader("content-disposition");

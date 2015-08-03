@@ -5,16 +5,51 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-       <form action="upload" enctype="multipart/form-data" method="POST">
-            <input type="file" name="file1"><br>
-            <input type="Submit" value="Upload File"><br>
-        </form>
-    </body>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+  <title>Online Crime Reporting</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.easing.min.js"></script>
+
+</head>
+
+<body>
+  <div id="main">	
+	<div id="site_content">
+          <div id="site_heading">
+	    <h1>Online Crime Reporting</h1>	
+	    <h2>Proud to Serve</h2>  
+	  </div><!--close site_heading-->
+	  <div id="header">
+	    <div id="menubar">
+             <ul id="menu">
+            <li><a href="index.html">Home</a></li>
+            <li class="current"><a href="form.jsp">Our Work</a></li>
+            <li><a href="status.jsp">Check Status</a></li>
+            <li ><a href="login.jsp">Login</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+           </div><!--close menubar-->
+          </div><!--close header-->	  
+	  
+	  <div id="content">
+             <form action="upload" enctype="multipart/form-data" method="POST">
+             <input type="file" name="file1"/><br/><br/>
+             <input type="Submit" value="Upload File"/><br/>
+             </form>
+          </div>      
+          </div><!--close site_content-->
+          
+    <div id="footer">  
+        <p>Web Site by Ganesh Patel</p>
+    </div><!--close footer-->
+   
+  </div><!--close main-->	
+</body>
 </html>
