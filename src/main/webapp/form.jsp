@@ -39,10 +39,13 @@
           </div><!--close header-->	  
 	  
 	  <div id="content">
-             <form action="upload" enctype="multipart/form-data" method="POST">
+              
+              <h3 style="margin-left: 40px">Please name your file in format "username.complaintId.jpg." </h3>
+              <form action="upload" enctype="multipart/form-data" method="POST" style="margin-left: 40px;">
              <input type="file" name="file1"/><br/><br/>
              <input type="Submit" value="Upload File"/><br/>
-             </form>
+             </form><br/><br/>
+             <p style="color:red;font-weight: bold">${Message1}</p>
           </div>      
           </div><!--close site_content-->
           

@@ -43,7 +43,9 @@ public class FileUploadServlet extends HttpServlet {
             part.write(getFileName(part));
         }
         
-        response.sendRedirect("form.jsp");
+        request.setAttribute("Message1", "File has been successfully uploaded.");
+        RequestDispatcher rd=request.getRequestDispatcher("login.jsp");
+        rd.include(request,response);   
     }
  
     private void printEachPart(Part part, PrintWriter pw) {
