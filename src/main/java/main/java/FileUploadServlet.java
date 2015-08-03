@@ -44,7 +44,7 @@ public class FileUploadServlet extends HttpServlet {
         }
         
         response.setHeader("Message1", "File has been successfully uploaded.");
-        response.sendRedirect("login.jsp");
+        response.sendRedirect("form.jsp");
         
     }
  
