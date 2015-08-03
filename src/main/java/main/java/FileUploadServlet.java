@@ -8,6 +8,7 @@ package main.java;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Collection;
+import javax.servlet.RequestDispatcher;
  
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
@@ -35,6 +36,14 @@ public class FileUploadServlet extends HttpServlet {
  
         Collection<Part> parts = request.getParts();
  
+        out.write("<h2> Total parts : " + parts.size() + "</h2>");
+ 
+        for (Part part : parts) {
+            printEachPart(part, out);
+            part.write(getFileName(part));
+        }
+        
+        response.sendRedirect("form.jsp");
     }
  
     private void printEachPart(Part part, PrintWriter pw) {
@@ -50,8 +59,8 @@ public class FileUploadServlet extends HttpServlet {
             sb.append(header + " : " + part.getHeader(header));
             sb.append("<br>");
         }
-       // sb.append("</p>");
-       // pw.write(sb.toString());
+        sb.append("</p>");
+        pw.write(sb.toString());
  
     }
  
