@@ -45,8 +45,9 @@
              <input type="file" name="file1"/><br/><br/>
              <input type="Submit" value="Upload File"/><br/>
              </form><br/><br/>
-             <p style="color:red;font-weight: bold"><% if(session.getAttribute("Message1")!= null) {
-                    session.getAttribute("Message1") }%> </p>
+             <%  if(session.getAttribute("Message1")!= null) { %>
+             <p style="color:red;font-weight: bold"><%= session.getAttribute("Message1")%> </p>
+             <%= } %>
           </div>      
           </div><!--close site_content-->
           
