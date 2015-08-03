@@ -16,6 +16,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.servlet.http.Part;
  
 @WebServlet("/upload")
@@ -32,6 +33,7 @@ public class FileUploadServlet extends HttpServlet {
  
     protected void doPost(HttpServletRequest request,
             HttpServletResponse response) throws ServletException, IOException {
+        HttpSession session=request.getSession();
         PrintWriter out = response.getWriter();
  
         Collection<Part> parts = request.getParts();
@@ -42,8 +44,7 @@ public class FileUploadServlet extends HttpServlet {
             printEachPart(part, out);
             part.write(getFileName(part));
         }
-        
-        response.setHeader("Message1", "File has been successfully uploaded.");
+        session.setAttribute("Message1","File has been successfully uploaded.");
         response.sendRedirect("form.jsp");
         
     }
