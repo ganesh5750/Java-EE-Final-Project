@@ -47,7 +47,7 @@
              </form><br/><br/>
              <%  if(session.getAttribute("Message1")!= null) { %>
              <p style="color:red;font-weight: bold"><%= session.getAttribute("Message1")%> </p>
-             <%= } %>
+             <% } %>
           </div>      
           </div><!--close site_content-->
           
