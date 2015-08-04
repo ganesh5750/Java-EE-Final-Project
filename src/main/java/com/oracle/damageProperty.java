@@ -149,8 +149,8 @@ public class damageProperty extends HttpServlet {
                 session.setAttribute("complaint_number", rs.getInt("complaint_id"));
               
                 request.setAttribute("message1", "You have registered an complaint we will get back to you soon.Your complaint id : ");
-               // RequestDispatcher rd=request.getRequestDispatcher("damageProperty.jsp"); 
-               //rd.include(request,response); 
+                RequestDispatcher rd=request.getRequestDispatcher("damageProperty.jsp"); 
+               rd.include(request,response); 
                 } else {
                 out.println("Error in database connection");
                 }
