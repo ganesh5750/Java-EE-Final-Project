@@ -39,7 +39,7 @@
           </div><!--close header-->	  
 	  
 	  <div id="content">
-              <form action="damageProperty" method="post" style="margin-left: 40px" >
+              <form action="/damageProperty" method="post" style="margin-left: 40px" >
                 <fieldset class="fieldsetStyle">
                   <legend class="legendStyle">Damage to Property</legend> 
                 <div class="damageStyle" style="margin-left: 20px">
@@ -71,8 +71,9 @@
                      </div>
                  </fieldset> 
             </form>&nbsp;&nbsp;
-            <div style="color:red;"> ${message1} 
+            <div style="color:red;"> 
              <% if(session.getAttribute("complaint_number") != null) {
+                 out.println(session.getAttribute("message1"));
                  out.println (session.getAttribute("complaint_number"));
              }
                  session.setAttribute("complaint_number",null);  
