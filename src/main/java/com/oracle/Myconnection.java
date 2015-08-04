@@ -25,7 +25,7 @@ public class Myconnection {
             System.err.println("Drivers not found!, " + ex.getMessage());
         }
         try {
-           String jdbc = "jdbc:mysql://127.10.23.130:3306/mydatabase";
+           String jdbc = "jdbc:mysql://127.10.23.130:3306/crimereport";
            String username = "adminRtYgrUC";
            String password = "nZeBGXHzyPfz";
             
