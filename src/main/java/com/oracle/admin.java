@@ -9,6 +9,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -76,7 +78,12 @@ public class admin extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
          Myconnection  conn=new Myconnection();
-         Connection con=conn.getConnection();
+         Connection con = null;
+        try {
+            con = conn.getConnection();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(admin.class.getName()).log(Level.SEVERE, null, ex);
+        }
           PrintWriter out=response.getWriter();
           try {
               String query="UPDATE complaint SET police_id = ? WHERE complaint_id = ?";

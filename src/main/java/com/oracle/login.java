@@ -11,6 +11,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -83,7 +85,12 @@ public class login extends HttpServlet {
          String password = request.getParameter("password");
          int count=0;
          Myconnection  conn=new Myconnection();
-         Connection con=conn.getConnection();
+         Connection con=null;
+        try {
+            con = conn.getConnection();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(login.class.getName()).log(Level.SEVERE, null, ex);
+        }
          response.setContentType("text/html");
          PrintWriter out=response.getWriter();
          if((password.equals("admin") && uname.equals("admin"))) {

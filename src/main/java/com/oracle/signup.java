@@ -10,6 +10,8 @@ import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -89,7 +91,12 @@ public class signup extends HttpServlet {
            if(password.equals(cpassword)){
                   Client c = new Client(email,firstName,lastName,password,cpassword,username,phone);
                   Myconnection  conn=new Myconnection();
-                  Connection con=conn.getConnection();
+                  Connection con = null;
+               try {
+                   con = conn.getConnection();
+               } catch (ClassNotFoundException ex) {
+                   Logger.getLogger(signup.class.getName()).log(Level.SEVERE, null, ex);
+               }
              try {
                if(con != null){
                 String query="INSERT INTO client (lastName, firstName, username, password, email, phone ) VALUES(?,?,?,?,?,?)";

@@ -19,6 +19,8 @@ import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Set;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -98,7 +100,12 @@ public class damageVehicle extends HttpServlet {
          map.put("ques7", request.getParameter("suspect"));
          map.put("ques8", request.getParameter("crime"));
          Myconnection  conn=new Myconnection();
-         Connection con=conn.getConnection();
+         Connection con = null;
+        try {
+            con = conn.getConnection();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(damageVehicle.class.getName()).log(Level.SEVERE, null, ex);
+        }
          PrintWriter out=response.getWriter();
          HttpSession session = request.getSession();
          

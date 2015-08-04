@@ -9,33 +9,32 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author Ganesh
  */
 public class Myconnection {
-     public  Connection getConnection() {
-         Connection conn = null;
+    public Connection getConnection() throws ClassNotFoundException {
+        Connection conn = null;
         try {
             Class.forName("com.mysql.jdbc.Driver");
-        } catch (ClassNotFoundException ex) {
-            System.err.println("JDBC Driver Not Found: " + ex.getMessage());
-        }
-
-        try {
-            String jdbc = "jdbc:mysql://localhost/mydatabase";
-            conn = DriverManager.getConnection(jdbc, "root", "");
+            String jdbc = "jdbc:mysql://" + System.getenv("OPENSHIFT_MYSQL_DB_HOST") + ":" +
+                    System.getenv("OPENSHIFT_MYSQL_DB_PORT") + "/practiceblog";
+            String user = System.getenv("OPENSHIFT_MYSQL_DB_USERNAME");
+            String pass = System.getenv("OPENSHIFT_MYSQL_DB_PASSWORD");        
+            conn = DriverManager.getConnection(jdbc, user, pass);
         } catch (SQLException ex) {
-            System.err.println("Failed to Connect: " + ex.getMessage());
+            Logger.getLogger(Myconnection.class.getName()).log(Level.SEVERE, null, ex);
         }
         return conn;
-    }
-     
+    } 
      
 
     
-    public int checkingDuplicateUserName(String username){
+    public int checkingDuplicateUserName(String username) throws ClassNotFoundException{
         int rowCount=0;
         try {
             Connection con=getConnection();
@@ -52,7 +51,7 @@ public class Myconnection {
         return rowCount;
     }
     
-    public int checkingDuplicateEmailId(String email){
+    public int checkingDuplicateEmailId(String email) throws ClassNotFoundException{
         int rowCount=0;
         try {
             Connection con=getConnection();
