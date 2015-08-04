@@ -14,23 +14,28 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author Ganesh
+ *     @author Ganesh
  */
 public class Myconnection {
     public Connection getConnection() throws ClassNotFoundException {
-        Connection conn = null;
+       Connection conn = null;
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            String jdbc = "jdbc:mysql://" + System.getenv("OPENSHIFT_MYSQL_DB_HOST") + ":" +
-                    System.getenv("OPENSHIFT_MYSQL_DB_PORT") + "/mydatabase";
-            String user = System.getenv("OPENSHIFT_MYSQL_DB_USERNAME");
-            String pass = System.getenv("OPENSHIFT_MYSQL_DB_PASSWORD");        
-            conn = DriverManager.getConnection(jdbc, user, pass);
+        } catch (ClassNotFoundException ex) {
+            System.err.println("Drivers not found!, " + ex.getMessage());
+        }
+        try {
+           String jdbc = "jdbc:mysql://127.10.23.130:3306/mydatabase";
+           String username = "adminRtYgrUC";
+           String password = "nZeBGXHzyPfz";
+            
+            conn = DriverManager.getConnection(jdbc, username, password);
         } catch (SQLException ex) {
-            Logger.getLogger(Myconnection.class.getName()).log(Level.SEVERE, null, ex);
+            System.err.println("Failed to Connect!, " + ex.getMessage());
         }
         return conn;
-    } 
+     }
+    
      
 
     
