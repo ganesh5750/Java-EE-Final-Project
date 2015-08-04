@@ -18,10 +18,10 @@
         <servlet-name>logout</servlet-name>
         <servlet-class>com.oracle.logout</servlet-class>
     </servlet>
-    <servlet>
+    <!--<servlet>
         <servlet-name>damageProperty</servlet-name>
         <servlet-class>com.oracle.damageProperty</servlet-class>
-    </servlet>
+    </servlet>-->
     <servlet>
         <servlet-name>admin</servlet-name>
         <servlet-class>com.oracle.admin</servlet-class>
@@ -60,10 +60,10 @@
         <servlet-name>logout</servlet-name>
         <url-pattern>/logout</url-pattern>
     </servlet-mapping>
-    <servlet-mapping>
+   <!-- <servlet-mapping>
         <servlet-name>damageProperty</servlet-name>
         <url-pattern>/damageProperty</url-pattern>
-    </servlet-mapping>
+    </servlet-mapping>-->
     <servlet-mapping>
         <servlet-name>admin</servlet-name>
         <url-pattern>/admin</url-pattern>
