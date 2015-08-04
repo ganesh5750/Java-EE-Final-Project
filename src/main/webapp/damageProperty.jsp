@@ -42,7 +42,7 @@
               <form action="damageProperty" method="post" style="margin-left: 40px" >
                 <fieldset class="fieldsetStyle">
                   <legend class="legendStyle">Damage to Property</legend> 
-                <div class="damageStyle">
+                <div class="damageStyle" style="margin-left: 20px">
                     <label for="radio1"> Did the incident happen within the city limit of Sarnia?</label>
                     <input type="radio" name="radio1" value="Yes">Yes
                     <input type="radio" name="radio1" value="No">No<br/><br/>

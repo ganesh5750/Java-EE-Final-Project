@@ -390,3 +390,38 @@ text-shadow: 1px 1px #000;}
 
 #footer a:hover
 { text-decoration: none;}
+
+.legendStyle {
+    color : red;
+    font-weight: bold;
+    padding-left: 10px;
+    padding-right:10px;
+    margin-bottom: 20px;
+    text-align: center;
+    
+}
+
+.damageStyle {
+   padding-left: 20px;
+   padding-bottom: 20px;
+}
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+table {
+    width : 100%;
+
+td {
+    padding: 15px;
+}
+th {
+    height: 50px;
+    text-align: center;
+    width : 80%;
+    background-color: #B8860B;
+}
