@@ -85,9 +85,9 @@ public class login extends HttpServlet {
          String password = request.getParameter("password");
          int count=0;
          Myconnection  conn=new Myconnection();
-         Connection con=null;
+         Connection con;
         try {
-            con = conn.getConnection();
+             con = conn.getConnection();
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(login.class.getName()).log(Level.SEVERE, null, ex);
         }
