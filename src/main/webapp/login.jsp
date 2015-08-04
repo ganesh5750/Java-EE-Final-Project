@@ -1,6 +1,6 @@
 <%-- 
-    Document   : FileUpload
-    Created on : Aug 2, 2015, 6:50:01 PM
+    Document   : login
+    Created on : Jul 22, 2015, 10:28:39 PM
     Author     : Ganesh
 --%>
 
@@ -20,6 +20,7 @@
 </head>
 
 <body>
+
   <div id="main">	
 	<div id="site_content">
           <div id="site_heading">
@@ -30,31 +31,37 @@
 	    <div id="menubar">
              <ul id="menu">
             <li><a href="index.html">Home</a></li>
-            <li class="current"><a href="form.jsp">File Upload</a></li>
+            <li><a href="form.jsp">File Upload</a></li>
             <li><a href="status.jsp">Check Status</a></li>
-            <li ><a href="login.jsp">Login</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li class="current"><a href="login.jsp">Login</a></li>
+            <li><a href="SignUp.jsp">Sign Up</a></li>
+            <li><a href="contact.jsp">Contact Us</a></li>
             </ul>
            </div><!--close menubar-->
           </div><!--close header-->	  
 	  
 	  <div id="content">
+            <div style="margin-left: 80px;margin-top: 50px">
+            <form action="login" method="post">
+               
+                <label for="username">Username:</label>
+                <input type="text" name="username"><br><br>
+                <label for="password">Password:</label>
+                <input type="password" name="password"><br/><br/>
               
-              <h3 style="margin-left: 40px">Please name your file in format "username.complaintId.jpg." </h3>
-              <form action="upload" enctype="multipart/form-data" method="POST" style="margin-left: 40px;">
-             <input type="file" name="file1"/><br/><br/>
-             <input type="Submit" value="Upload File"/><br/>
-             </form><br/><br/>
-             <%  if(session.getAttribute("Message1")!= null) { %>
-             <p style="color:red;font-weight: bold"><%= session.getAttribute("Message1")%> </p>
-             <% } %>
+                <input type="submit" value="Submit" id="submit">        
+            </form><br/><br/>   
+                <div style="color:red;"> ${errorMessage}</div>
+               
+            </div><!-- closing form_style tag-->      
           </div>      
-          </div><!--close site_content-->
-          
-    <div id="footer">  
+          </div><!--close site_content-->	
+          <div id="footer" style="margin-top: 150px;">  
       <p>&COPY; Web Site by Ganesh Patel</p>
     </div><!--close footer-->
    
   </div><!--close main-->	
 </body>
 </html>
+
+

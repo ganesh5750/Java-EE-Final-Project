@@ -1,6 +1,6 @@
 <%-- 
-    Document   : FileUpload
-    Created on : Aug 2, 2015, 6:50:01 PM
+    Document   : contact.jsp
+    Created on : Aug 2, 2015, 11:34:08 PM
     Author     : Ganesh
 --%>
 
@@ -9,7 +9,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 
 <head>
-  <title>Online Crime Reporting</title>
+  <title>Onlince Crime Reporting</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=9" />
@@ -29,30 +29,24 @@
 	  <div id="header">
 	    <div id="menubar">
              <ul id="menu">
-            <li><a href="index.html">Home</a></li>
-            <li class="current"><a href="form.jsp">File Upload</a></li>
-            <li><a href="status.jsp">Check Status</a></li>
-            <li ><a href="login.jsp">Login</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="index.jsp">Home</a></li>
+            <li><a href="ourwork.html">Our Work</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="login.jsp">Login</a></li>
+            <li class="current"><a href="contact.jsp">Contact Us</a></li>
             </ul>
            </div><!--close menubar-->
           </div><!--close header-->	  
 	  
 	  <div id="content">
-              
-              <h3 style="margin-left: 40px">Please name your file in format "username.complaintId.jpg." </h3>
-              <form action="upload" enctype="multipart/form-data" method="POST" style="margin-left: 40px;">
-             <input type="file" name="file1"/><br/><br/>
-             <input type="Submit" value="Upload File"/><br/>
-             </form><br/><br/>
-             <%  if(session.getAttribute("Message1")!= null) { %>
-             <p style="color:red;font-weight: bold"><%= session.getAttribute("Message1")%> </p>
-             <% } %>
+              <h3 style="margin-left: 40px;color : skyblue;"> Our Help-line numbers :</h3>
+              <h3 style="margin-left: 80px">519-225-6521</h3>
+              <h3 style="margin-left: 80px">519-225-6522</h3>
+              <h3 style="margin-left: 80px">519-225-6523</h3>
           </div>      
-          </div><!--close site_content-->
-          
+          </div><!--close site_content-->	
     <div id="footer">  
-      <p>&COPY; Web Site by Ganesh Patel</p>
+      <a href="http://validator.w3.org/check?uri=referer">Valid XHTML</a> | <a href="http://fotogrph.com/">Images</a> | website template by <a href="http://www.araynordesign.co.uk">ARaynorDesign</a>
     </div><!--close footer-->
    
   </div><!--close main-->	
