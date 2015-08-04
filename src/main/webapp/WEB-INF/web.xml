@@ -27,7 +27,7 @@
         <servlet-class>com.oracle.admin</servlet-class>
     </servlet>
     <servlet>
-  <!--      <servlet-name>damageVehicle</servlet-name>
+        <servlet-name>damageVehicle</servlet-name>
         <servlet-class>com.oracle.damageVehicle</servlet-class>
     </servlet>
     <servlet>
@@ -42,7 +42,7 @@
         <servlet-name>theft1</servlet-name>
         <servlet-class>com.oracle.theft1</servlet-class>
     </servlet>
-   -->  
+    
     <servlet-mapping>
         <servlet-name>FileUploadServlet</servlet-name>
         <url-pattern>/upload</url-pattern>
@@ -69,7 +69,7 @@
         <url-pattern>/admin</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
- <!--       <servlet-name>damageVehicle</servlet-name>
+        <servlet-name>damageVehicle</servlet-name>
         <url-pattern>/damageVehicle</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
@@ -84,5 +84,5 @@
         <servlet-name>theft1</servlet-name>
         <url-pattern>/theft1</url-pattern>
     </servlet-mapping>
-    -->
+    
 </web-app>
