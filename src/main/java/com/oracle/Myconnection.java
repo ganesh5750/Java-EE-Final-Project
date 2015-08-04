@@ -25,10 +25,13 @@ public class Myconnection {
             System.err.println("Drivers not found!, " + ex.getMessage());
         }
         try {
-           String jdbc = "jdbc:mysql://127.10.23.130:3306/crimereport";
-           String username = "adminRtYgrUC";
-           String password = "nZeBGXHzyPfz";
-            
+         //  String jdbc = "jdbc:mysql://127.10.23.130:3306/crimereport";
+         //  String username = "adminRtYgrUC";
+         //  String password = "nZeBGXHzyPfz";
+           
+            String jdbc = "jdbc:mysql://localhost/mydatabase";
+           String username = "root";
+           String password = "";
             conn = DriverManager.getConnection(jdbc, username, password);
         } catch (SQLException ex) {
             System.err.println("Failed to Connect!, " + ex.getMessage());
