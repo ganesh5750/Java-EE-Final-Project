@@ -110,7 +110,7 @@ public class damageVehicle extends HttpServlet {
 
              try {
                if(con != null){          
-                String query="INSERT INTO damageVehicle (username, ques_id1, answer1, ques_id2, answer2, ques_id3, answer3, ques_id4, answer4, ques_id5, answer5, ques_id6, answer6,  ques_id7, answer7,  ques_id8, answer8) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+                String query="INSERT INTO damagevehicle (username, ques_id1, answer1, ques_id2, answer2, ques_id3, answer3, ques_id4, answer4, ques_id5, answer5, ques_id6, answer6,  ques_id7, answer7,  ques_id8, answer8) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
                 PreparedStatement stmt=con.prepareStatement(query);
                 stmt.setString(1,session.getAttribute("username").toString());
                 stmt.setString(2,iter.next().toString());
