@@ -21,6 +21,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -30,6 +31,7 @@ import javax.servlet.http.HttpSession;
  *
  * @author Ganesh
  */
+@WebServlet (name = "lostProperty", urlPatterns= {"/lostProperty"})
 public class lostProperty extends HttpServlet {
 
     /**
@@ -151,9 +153,9 @@ public class lostProperty extends HttpServlet {
            
                 session.setAttribute("complaint_number", rs.getInt("complaint_id"));
               
-                request.setAttribute("message1", "You have registered an complaint we will get back to you soon.Your complaint id : ");
-                RequestDispatcher rd=request.getRequestDispatcher("damageProperty.jsp"); 
-               rd.include(request,response); 
+                session.setAttribute("message1", "You have registered an complaint we will get back to you soon.Your complaint id : ");
+                response.sendRedirect("lostProperty.jsp");
+               
                 } else {
                 out.println("Error in database connection");
                 }

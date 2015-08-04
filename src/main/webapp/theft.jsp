@@ -81,7 +81,15 @@
                     <input type="submit" value="SUBMIT" style="width: 20%"/><br/>
                    </div>
                 </fieldset>
-            </form><br/><br/> 
+            </form><br/>
+             <div style="color:red;"> 
+             <% if(session.getAttribute("complaint_number") != null) {
+                 out.println(session.getAttribute("message1"));
+                 out.println (session.getAttribute("complaint_number"));
+             }
+                 session.setAttribute("complaint_number",null);  
+            %></div>
+            <br/> 
           </div>      
           </div><!--close site_content-->	
     <div id="footer">  
