@@ -78,12 +78,10 @@ public class admin extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
          Myconnection  conn=new Myconnection();
-         Connection con = null;
-        try {
-            con = conn.getConnection();
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(admin.class.getName()).log(Level.SEVERE, null, ex);
-        }
+         Connection con = conn.getConnection();
+        
+            
+        
           PrintWriter out=response.getWriter();
           try {
               String query="UPDATE complaint SET police_id = ? WHERE complaint_id = ?";

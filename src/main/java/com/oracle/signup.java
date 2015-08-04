@@ -91,12 +91,8 @@ public class signup extends HttpServlet {
            if(password.equals(cpassword)){
                   Client c = new Client(email,firstName,lastName,password,cpassword,username,phone);
                   Myconnection  conn=new Myconnection();
-                  Connection con = null;
-               try {
-                   con = conn.getConnection();
-               } catch (ClassNotFoundException ex) {
-                   Logger.getLogger(signup.class.getName()).log(Level.SEVERE, null, ex);
-               }
+                  Connection con = conn.getConnection();
+               
              try {
                if(con != null){
                 String query="INSERT INTO client (lastName, firstName, username, password, email, phone ) VALUES(?,?,?,?,?,?)";

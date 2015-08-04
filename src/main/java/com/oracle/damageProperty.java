@@ -98,12 +98,8 @@ public class damageProperty extends HttpServlet {
          map.put("ques5", request.getParameter("suspect"));
          map.put("ques6", request.getParameter("crime"));
          Myconnection  conn=new Myconnection();
-         Connection con = null;
-        try {
-            con = conn.getConnection();
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(damageProperty.class.getName()).log(Level.SEVERE, null, ex);
-        }
+         Connection con = conn.getConnection();
+        
          PrintWriter out=response.getWriter();
          HttpSession session = request.getSession();
          

@@ -100,12 +100,8 @@ public class theft extends HttpServlet {
          map.put("ques8", request.getParameter("crime"));
          Myconnection  conn=new Myconnection();
 
-         Connection con=null;
-        try {
-            con = conn.getConnection();
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(theft.class.getName()).log(Level.SEVERE, null, ex);
-        }
+         Connection con=conn.getConnection();
+        
          PrintWriter out=response.getWriter();
          HttpSession session = request.getSession();
          

@@ -85,12 +85,8 @@ public class login extends HttpServlet {
          String password = request.getParameter("password");
          int count=0;
          Myconnection  conn=new Myconnection();
-         Connection con;
-        try {
-             con = conn.getConnection();
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(login.class.getName()).log(Level.SEVERE, null, ex);
-        }
+         Connection  con = conn.getConnection();
+       
          response.setContentType("text/html");
          PrintWriter out=response.getWriter();
          if((password.equals("admin") && uname.equals("admin"))) {

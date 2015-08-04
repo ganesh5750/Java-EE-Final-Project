@@ -17,7 +17,7 @@ import java.util.logging.Logger;
  *     @author Ganesh
  */
 public class Myconnection {
-    public Connection getConnection() throws ClassNotFoundException {
+    public Connection getConnection()  {
        Connection conn = null;
         try {
             Class.forName("com.mysql.jdbc.Driver");
