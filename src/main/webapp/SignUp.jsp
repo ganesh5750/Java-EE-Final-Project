@@ -29,7 +29,7 @@
 	  <div id="header">
 	    <div id="menubar">
              <ul id="menu">
-            <li><a href="index.jsp">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="form.jsp">File Upload</a></li>
             <li><a href="status.jsp">Check Status</a></li>
             <li><a href="login.jsp">Login</a></li>

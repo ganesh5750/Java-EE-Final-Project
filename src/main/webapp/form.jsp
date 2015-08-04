@@ -33,7 +33,8 @@
             <li class="current"><a href="form.jsp">File Upload</a></li>
             <li><a href="status.jsp">Check Status</a></li>
             <li ><a href="login.jsp">Login</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li ><a href="SignUp.jsp">Sign Up</a></li>
+            <li><a href="contact.jsp">Contact Us</a></li>
             </ul>
            </div><!--close menubar-->
           </div><!--close header-->	  
