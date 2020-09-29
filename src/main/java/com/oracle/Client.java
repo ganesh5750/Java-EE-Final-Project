@@ -11,7 +11,8 @@ package com.oracle;
  */
 public class Client {
 
-    
+	//adding new change for develop branch
+	private test1;
     private String email;
     private String firstName;
     private String lastName;
